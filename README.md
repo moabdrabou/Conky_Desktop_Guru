@@ -1,5 +1,5 @@
 # Conky Desktop Guru
-#### Screenshot is below 
+#### Screenshot is below :point_down: :point_down: :point_down:
 ## How to Install
    1. Run the following command to install conky:
       > sudo apt install conky-all
