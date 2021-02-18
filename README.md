@@ -21,6 +21,7 @@
          > sudo cat /sys/class/hwmon/hwmon4/name
 
 ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Sensors.png?raw=true)
+
    7. sdsd
 
 
