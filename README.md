@@ -19,8 +19,9 @@
          > ls /sys/class/hwmon
         - Then this command to find the name of each sensor "Make sure to change the number after hwmon to check all your sensors":
          > sudo cat /sys/class/hwmon/hwmon4/name
+
 ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Sensors.png?raw=true)
-   7. 
+   7. sdsd
 
 
 
