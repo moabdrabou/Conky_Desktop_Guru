@@ -10,7 +10,7 @@
    - Copy the file to the conky folder in your home directory:
       > cp -v ~/Documents/conky.config ~/.config/conky
    - Adjust the hardware configuration according to your settings
-     - Internal name of your network adapter "Replace enp6s0 with the name of your network adapter" Run the below command to find the name of your network adapter:
+     - Your network adapter parameter "Replace enp6s0 with the name of your network adapter" Run the below command to find the name of your network adapter:
        > sudo ifconfig
      - Your processor "Replace AMD Ryzen 5 @ 3.60GHz with the name of your processor" 
    - 
