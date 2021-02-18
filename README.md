@@ -27,7 +27,7 @@
 
            ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Sensors.png?raw=true)
 
-   7. sdsd
+   7. Create an auto start item for conky to load once system is started
 
 
 
