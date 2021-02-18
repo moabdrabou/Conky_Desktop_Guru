@@ -16,7 +16,9 @@
       - The number of your CPU cores, run the following command to find out how many cores is your CPU:
          > nproc
       - Your temp sensor. You can run this command to find out how many sensors you have:
-         > ls /sys/class/hwmon ... Then 
+         > ls /sys/class/hwmon
+        - Then this command to find the name of each sensor "Make sure to change the number after hwmon to check all your sensors":
+         > sudo cat /sys/class/hwmon/hwmon4/name
    7. 
 
 
