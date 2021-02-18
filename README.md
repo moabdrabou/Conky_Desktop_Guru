@@ -6,6 +6,8 @@
    - To create the config file run:
    
          conky -C > ~/Documents/conky.config
-   - [mario-more](https://github.com/moabdrabou/CS50x_2021/blob/main/PSET1/mario.c)
+   - Create the conky folder in the home directory:
+  
+         mkdir ~/.config/conky
    - [cash](https://github.com/moabdrabou/CS50x_2021/blob/main/PSET1/cash.c)
 
