@@ -14,7 +14,7 @@
 
          cp -v ~/Documents/conky.config ~/.config/conky
    - Adjust the hardware configuration according to your settings
-         -nn
+         --nn
    - 
 
 
