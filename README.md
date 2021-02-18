@@ -10,8 +10,8 @@
    - Copy the file to the conky folder in your home directory:
       > cp -v ~/Documents/conky.config ~/.config/conky
    - Adjust the hardware configuration according to your settings
-         Internal name of your network adapter
-         Your processor
+     - Internal name of your network adapter
+     - Your processor
          
    - 
 
