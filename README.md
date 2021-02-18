@@ -1,5 +1,5 @@
 # Conky Desktop Guru
-![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/HDD.png?raw=true)        ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Network.png?raw=true)       ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/RamGpu.png?raw=true)
+![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Top.png?raw=true)    ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/HDD.png?raw=true)        ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Network.png?raw=true)       ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/RamGpu.png?raw=true)
 ## How to Install
    1. Run the following command to install conky:
       > sudo apt install conky-all
