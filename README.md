@@ -15,6 +15,7 @@
       - Your processor "Replace AMD Ryzen 5 @ 3.60GHz with the name of your processor" 
 
 ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Processor.png?raw=true)
+
       - The number of your CPU cores, run the following command to find out how many cores is your CPU:
          > nproc
       - Your temp sensor. You can run this command to find out how many sensors you have:
