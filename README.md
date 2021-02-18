@@ -10,7 +10,7 @@
    5. Copy the file to the conky folder in your home directory:
       > cp -v ~/Documents/conky.config ~/.config/conky
    6. Adjust the hardware configuration according to your settings
-      - Network adapter parameter "Replace enp6s0 with the name of your network adapter" Run the below command to find the name of your network adapter:
+      - Network adapter parameter "Replace enp6s0 with the name of your network adapter". Run the below command to find the name of your network adapter:
          > sudo ifconfig
 
            ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Lan.png?raw=true)
