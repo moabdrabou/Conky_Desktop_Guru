@@ -10,15 +10,15 @@
    5. Copy the file to the conky folder in your home directory:
       > cp -v ~/Documents/conky.config ~/.config/conky
    6. Adjust the hardware configuration according to your settings
-      - Your network adapter parameter "Replace enp6s0 with the name of your network adapter" Run the below command to find the name of your network adapter:
+      - Network adapter parameter "Replace enp6s0 with the name of your network adapter" Run the below command to find the name of your network adapter:
          > sudo ifconfig
-      - Your processor "Replace AMD Ryzen 5 @ 3.60GHz with the name of your processor" 
+      - Processor "Replace AMD Ryzen 5 @ 3.60GHz with the name of your processor" 
 
            ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Processor.png?raw=true)
 
       - The number of your CPU cores, run the following command to find out how many cores is your CPU:
          > nproc
-      - Your temp sensor. You can run this command to find out how many sensors you have:
+      - Temp sensor. You can run this command to find out how many sensors you have:
          > ls /sys/class/hwmon
         - Then this command to find the name of each sensor "Make sure to change the number after hwmon to check all your sensors":
          > sudo cat /sys/class/hwmon/hwmon4/name
