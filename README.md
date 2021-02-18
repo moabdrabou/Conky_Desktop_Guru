@@ -16,7 +16,7 @@
 
 ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Processor.png?raw=true)
 
-      - The number of your CPU cores, run the following command to find out how many cores is your CPU:
+   - The number of your CPU cores, run the following command to find out how many cores is your CPU:
          > nproc
       - Your temp sensor. You can run this command to find out how many sensors you have:
          > ls /sys/class/hwmon
