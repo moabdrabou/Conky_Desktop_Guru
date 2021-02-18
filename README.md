@@ -12,6 +12,8 @@
    6. Adjust the hardware configuration according to your settings
       - Network adapter parameter "Replace enp6s0 with the name of your network adapter" Run the below command to find the name of your network adapter:
          > sudo ifconfig
+
+           ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Processor.png?raw=true)
       - Processor "Replace AMD Ryzen 5 @ 3.60GHz with the name of your processor" 
 
            ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Processor.png?raw=true)
