@@ -29,6 +29,7 @@
            ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Sensors.png?raw=true)
 
    7. Create an auto start item for conky to load once system is started
-      ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/DesktopGuru.png?raw=true)
+   
+         ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/DesktopGuru.png?raw=true)
 
 
