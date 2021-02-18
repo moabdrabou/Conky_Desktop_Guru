@@ -3,7 +3,7 @@
    - Run the following command to install conky:
 
          sudo apt install conky-all
-   - To create the config file run:
+   - Create the config file:
    
          conky -C > ~/Documents/conky.config
    - Create the conky folder in the home directory:
