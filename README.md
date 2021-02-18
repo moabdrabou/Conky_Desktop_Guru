@@ -1,3 +1,3 @@
 # Conky Desktop Guru
-## Install
+## - Install
 
