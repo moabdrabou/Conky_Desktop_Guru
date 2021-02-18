@@ -9,5 +9,5 @@
    - Create the conky folder in the home directory:
   
          mkdir ~/.config/conky
-   - [cash](https://github.com/moabdrabou/CS50x_2021/blob/main/PSET1/cash.c)
+   - Edit the created config file with the content from [this file](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/conky.config)
 
