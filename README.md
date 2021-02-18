@@ -1,2 +1,2 @@
-# Conky_Desktop_Guru
+# Conky Desktop Guru
 Custom Desktop Utility for Desktop 
