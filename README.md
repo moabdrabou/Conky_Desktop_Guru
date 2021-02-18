@@ -1,5 +1,5 @@
 # Conky Desktop Guru
-![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Top.png?raw=true)    ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/HDD.png?raw=true)        ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Network.png?raw=true)       ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/RamGpu.png?raw=true)
+#### Screenshot is below 
 ## How to Install
    1. Run the following command to install conky:
       > sudo apt install conky-all
@@ -29,6 +29,6 @@
            ![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Sensors.png?raw=true)
 
    7. Create an auto start item for conky to load once system is started
-
+![alt text](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/DesktopGuru.png?raw=true)
 
 
