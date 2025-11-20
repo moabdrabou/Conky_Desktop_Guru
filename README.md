@@ -8,6 +8,15 @@ Get a glimpse of what your desktop could look like with Conky Desktop Guru:
 
 ![Conky Desktop Guru Screenshot](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/DesktopGuru.png?raw=true)
 
+## Prerequisites
+
+This Conky configuration uses the **Montserrat** font. To ensure the display renders correctly, please install this font on your system.
+
+On Debian/Ubuntu-based systems, you can install it with the following command:
+```bash
+sudo apt install fonts-montserrat
+```
+
 ## Installation Guide
 
 Follow these simple steps to install and set up Conky on your system:
@@ -47,39 +56,20 @@ Follow these simple steps to install and set up Conky on your system:
 
 ## Hardware Configuration Adjustments
 
-To ensure Conky accurately displays your system's information, you'll need to adjust some parameters in the `conky.conf` file based on your hardware.
+This Conky configuration is designed to be as dynamic as possible. The **Processor Name** and **Network Adapter** are now detected automatically. However, you may still need to adjust the following settings in the `conky.conf` file to match your hardware.
 
-### 1. Network Adapter
+### 1. CPU Core Count
 
-Identify your network adapter's name and update the `conky.conf` accordingly.
-
-* **Find your network adapter:**
-    ```bash
-    sudo ifconfig
-    ```
-    (Example: Replace `enp6s0` with your adapter's name.)
-
-    ![Network Adapter Example](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Lan.png?raw=true)
-
-### 2. Processor Name
-
-Update the processor name in the configuration to match your system's CPU.
-
-* **Example:**
-    Replace `"AMD Ryzen 5 @ 3.60GHz"` with your actual processor name.
-
-    ![Processor Name Example](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Processor.png?raw=true)
-
-### 3. CPU Core Count
-
-Conky needs to know the number of cores your CPU has for accurate monitoring.
+The configuration file contains examples for different CPU core counts (4, 8, 12). You need to uncomment the lines that match your CPU and comment out the others.
 
 * **Find your CPU core count:**
     ```bash
     nproc
     ```
+* **Edit the `conky.conf` file:**
+    Open `~/.config/conky/conky.conf` and find the CPU section. You will see commented-out examples. Adjust them according to your core count.
 
-### 4. Temperature Sensors
+### 2. Temperature Sensors
 
 Configure Conky to display temperature readings from your specific hardware sensors.
 
@@ -92,11 +82,14 @@ Configure Conky to display temperature readings from your specific hardware sens
 * **Identify sensor names:**
     For each `hwmonX` directory, check its name to find the correct sensor. Replace `hwmon4` with the number you found in the previous step:
     ```bash
-    sudo cat /sys/class/hwmon/hwmon4/name
+    cat /sys/class/hwmon/hwmonX/name
     ```
-    Repeat this for all `hwmonX` entries until you find the relevant sensor (e.g., for CPU temperature).
+    Repeat this for all `hwmonX` entries until you find the relevant sensor (e.g., for CPU temperature, it might be `k10temp` or `coretemp`).
+    The `conky.conf` file has detailed comments on how to find and set the correct sensor path.
 
-    ![Temperature Sensors Example](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/Sensors.png?raw=true)
+### 3. GPU Monitoring (NVIDIA)
+
+The GPU monitoring section is configured for NVIDIA GPUs and requires the proprietary drivers. It will be automatically hidden if you don't have an NVIDIA card. For AMD or Intel GPUs, you will need to customize the configuration. The `conky.conf` file contains comments with more information.
 
 ## Autostart Conky
 
