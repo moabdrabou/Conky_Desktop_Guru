@@ -6,7 +6,7 @@ Enhance your Linux desktop with dynamic and customizable system monitoring using
 
 Get a glimpse of what your desktop could look like with Conky Desktop Guru:
 
-![Conky Desktop Guru Screenshot](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/DesktopGuru.png?raw=true)
+![Conky Desktop Guru Screenshot](https://github.com/moabdrabou/Conky_Desktop_Guru/blob/main/images/DesktopGuru.png)
 
 ## Prerequisites
 
@@ -143,13 +143,14 @@ To have Conky launch automatically every time your system starts, create an auto
 It's best practice to use a small script to ensure a delay and verify the Conky process before launching.
 
     Open your terminal and create a new script file in your home directory (e.g., conkystart.sh):
-    Bash
-
+    
+```bash
 nano ~/conkystart.sh
+```
 
 Paste the following code into the file:
-Bash
 
+```bash
 #!/bin/bash
 
 # Wait 10 seconds to ensure the desktop environment is loaded
@@ -160,25 +161,25 @@ killall conky
 
 # Launch Conky using your configuration file
 conky -c ~/.conky.conf &
+```
 
 (Note: Replace ~/.conky.conf with the actual path to your configuration file if it's different.)
 
 Save and close the file (Ctrl+S, Ctrl+X in nano).
 
 Make the script executable:
-Bash
-
+```bash
     chmod +x ~/conkystart.sh
-
+```
 ⚙️ 2. Add the Script to Startup Applications
 
 Now you'll use the GNOME Startup Applications manager to run this script automatically.
 
     Open the Startup Applications Preferences utility. You can do this by searching for "Startup Applications" in the Activities Overview (pressing the Super key or Windows key) or by running this command in the terminal:
-    Bash
-
+    
+```bash
     gnome-session-properties
-
+```
     Click the Add button.
 
     In the new window, enter the following details:
