@@ -10,7 +10,7 @@ Get a glimpse of what your desktop could look like with Conky Desktop Guru:
 
 ## Prerequisites
 
-This Conky configuration uses the **Montserrat** font. To ensure the display renders correctly, please download it from [Google Fonts](https://fonts.google.com/specimen/Montserrat).
+This Conky configuration uses the **DejaVu Sans Mono** font. To ensure the display renders correctly, please make sure it is installed on your system. You can usually install it using your distribution's package manager (e.g., `sudo apt-get install fonts-dejavu`).
 
 ## Installation Guide
 
@@ -51,11 +51,11 @@ Follow these simple steps to install and set up Conky on your system:
 
 ## Hardware Configuration Adjustments
 
-This Conky configuration is designed to be as dynamic as possible. The **Processor Name** and **Network Adapter** are now detected automatically. However, you may still need to adjust the following settings in the `conky.conf` file to match your hardware.
+This Conky configuration is designed to be as dynamic as possible. However, you may need to adjust the following settings in the `conky.conf` file to match your hardware.
 
 ### 1. CPU Core Count
 
-The configuration file contains examples for different CPU core counts (4, 8, 12). You need to uncomment the lines that match your CPU and comment out the others.
+The configuration file contains commented-out examples for CPU core counts of 4, 8, 12, and 16 cores. You need to uncomment the lines that match your CPU and comment out the others.
 
 * **Find your CPU core count:**
     ```bash
@@ -66,25 +66,73 @@ The configuration file contains examples for different CPU core counts (4, 8, 12
 
 ### 2. Temperature Sensors
 
-Configure Conky to display temperature readings from your specific hardware sensors.
+To find the correct hwmon path for your CPU temperature, you can use the following commands in the terminal.
 
 * **List available hardware monitoring devices:**
     ```bash
     ls /sys/class/hwmon
     ```
-    This will show directories like `hwmon0`, `hwmon1`, etc.
+    This will give you a list of `hwmonX` directories.
 
 * **Identify sensor names:**
-    For each `hwmonX` directory, check its name to find the correct sensor. Replace `hwmon4` with the number you found in the previous step:
+    For each directory, check its name to find the one related to your CPU (e.g., `k10temp`, `coretemp`):
     ```bash
     cat /sys/class/hwmon/hwmonX/name
     ```
-    Repeat this for all `hwmonX` entries until you find the relevant sensor (e.g., for CPU temperature, it might be `k10temp` or `coretemp`).
-    The `conky.conf` file has detailed comments on how to find and set the correct sensor path.
+    Once you have found the correct `hwmonX`, you can find the temperature input file by listing the files in that directory. It is usually called `tempY_input`, where Y is a number (usually 1). Then, you can use it in conky like this: `${hwmon X temp Y}`. For example: `${hwmon 3 temp 1}`.
 
 ### 3. GPU Monitoring (NVIDIA)
 
 The GPU monitoring section is configured for NVIDIA GPUs and requires the proprietary drivers. It will be automatically hidden if you don't have an NVIDIA card. For AMD or Intel GPUs, you will need to customize the configuration. The `conky.conf` file contains comments with more information.
+
+### 4. Network Interface
+
+While Conky attempts to auto-detect your network adapter, you might need to specify it manually in `conky.conf` if it's not displayed correctly.
+
+*   **Find your network interface name:**
+    Open your terminal and run:
+
+    ```bash
+    ip a
+    ```
+    Look for the interface name (e.g., `eth0`, `wlan0`, `enp7s0`). It's usually the one with an IP address assigned to it.
+
+*   **Edit the `conky.conf` file:**
+    Open `~/.config/conky/conky.conf` and locate the network section to update the interface name.
+
+## Optional Features
+
+The `conky.conf` file includes some optional features that are commented out by default. You can enable them by editing the file.
+
+### Disk I/O
+
+To enable the disk I/O graph, find the following section in `conky.conf` and uncomment it:
+
+```
+--[[Below is for the disk I/O graph, uncomment to enable
+${font :size=11}${color}HDD ${color}${hr 2}${color}
+${font Light:size=8}${default_color}DISK I/O:${color}${font} ${alignr}$diskio
+${voffset 2}${font Light:size=8}${default_color}READ: ${color}${font} ${goto 80}${color4}${diskiograph_read  15,210 ADFF2F 32CD32 750}${color}
+${voffset 2}${font Light:size=8}${default_color}WRITE:${color}${font} ${goto 80}${color4}${diskiograph_write 15,210 FF0000 8B0000 750}${color}
+--]]
+```
+
+### Top Processes
+
+To display the top processes by memory and CPU usage, find and uncomment this section:
+
+```
+--[[ Below is for the top processes by memory and CPU usage
+${voffset 3}${font :size=11}${color}Processes ${color}${hr 2}${color}
+${voffset -15}
+${font :size=10}${font Montserrat Light:size=8}${color1}TOTAL:${color}${font} ${alignr}${processes}
+${voffset -10} 
+${font Montserrat Light:size=9}${color1}APP NAME: ${goto 160}MEMORY: ${goto 245}CPU: ${color}${font}
+${voffset -16}
+${font Montserrat Light:size=9}${color1}${top_mem name 1} ${color}${font} ${goto 160}${top mem 1} % ${goto 235}${top cpu 1} %
+...
+--]]
+```
 
 ## Autostart Conky
 
