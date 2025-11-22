@@ -10,12 +10,7 @@ Get a glimpse of what your desktop could look like with Conky Desktop Guru:
 
 ## Prerequisites
 
-This Conky configuration uses the **Montserrat** font. To ensure the display renders correctly, please install this font on your system.
-
-On Debian/Ubuntu-based systems, you can install it with the following command:
-```bash
-sudo apt install fonts-montserrat
-```
+This Conky configuration uses the **Montserrat** font. To ensure the display renders correctly, please download it from [Google Fonts](https://fonts.google.com/specimen/Montserrat).
 
 ## Installation Guide
 
