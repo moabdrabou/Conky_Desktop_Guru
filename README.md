@@ -138,4 +138,61 @@ ${font Montserrat Light:size=9}${color1}${top_mem name 1} ${color}${font} ${goto
 
 To have Conky launch automatically every time your system starts, create an autostart entry for it. The exact steps may vary slightly depending on your desktop environment, but generally, you'll add `conky -c ~/.config/conky/conky.conf` to your startup applications.
 
+🚀 1. Create the Launch Script (Optional but Recommended)
+
+It's best practice to use a small script to ensure a delay and verify the Conky process before launching.
+
+    Open your terminal and create a new script file in your home directory (e.g., conkystart.sh):
+    Bash
+
+nano ~/conkystart.sh
+
+Paste the following code into the file:
+Bash
+
+#!/bin/bash
+
+# Wait 10 seconds to ensure the desktop environment is loaded
+sleep 10
+
+# Check if Conky is already running, and kill it if it is
+killall conky
+
+# Launch Conky using your configuration file
+conky -c ~/.conky.conf &
+
+(Note: Replace ~/.conky.conf with the actual path to your configuration file if it's different.)
+
+Save and close the file (Ctrl+S, Ctrl+X in nano).
+
+Make the script executable:
+Bash
+
+    chmod +x ~/conkystart.sh
+
+⚙️ 2. Add the Script to Startup Applications
+
+Now you'll use the GNOME Startup Applications manager to run this script automatically.
+
+    Open the Startup Applications Preferences utility. You can do this by searching for "Startup Applications" in the Activities Overview (pressing the Super key or Windows key) or by running this command in the terminal:
+    Bash
+
+    gnome-session-properties
+
+    Click the Add button.
+
+    In the new window, enter the following details:
+
+        Name: Conky Starter (or any name you prefer)
+
+        Command: /home/yourusername/conkystart.sh (Replace yourusername with your actual Linux username).
+
+        Comment: Launches Conky with a delay
+
+    Click Add to save the entry.
+
+🔁 3. Restart and Test
+
+Log out and log back in, or restart your system. Conky should appear automatically after a short delay (10 seconds, as set in the script).
+
 Enjoy your enhanced desktop experience with Conky Desktop Guru!
