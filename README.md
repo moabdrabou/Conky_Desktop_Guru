@@ -142,7 +142,7 @@ To have Conky launch automatically every time your system starts, create an auto
 
 It's best practice to use a small script to ensure a delay and verify the Conky process before launching.
 
-    Open your terminal and create a new script file in your home directory (e.g., conkystart.sh):
+Open your terminal and create a new script file in your home directory (e.g., conkystart.sh):
     
 ```bash
 nano ~/conkystart.sh
@@ -175,22 +175,22 @@ Make the script executable:
 
 Now you'll use the GNOME Startup Applications manager to run this script automatically.
 
-    Open the Startup Applications Preferences utility. You can do this by searching for "Startup Applications" in the Activities Overview (pressing the Super key or Windows key) or by running this command in the terminal:
+Open the Startup Applications Preferences utility. You can do this by searching for "Startup Applications" in the Activities Overview (pressing the Super key or Windows key) or by running this command in the terminal:
     
 ```bash
     gnome-session-properties
 ```
-    Click the Add button.
+Click the Add button.
 
-    In the new window, enter the following details:
+In the new window, enter the following details:
 
-        Name: Conky Starter (or any name you prefer)
+- Name: Conky Starter (or any name you prefer)
 
-        Command: /home/yourusername/conkystart.sh (Replace yourusername with your actual Linux username).
+- Command: /home/yourusername/conkystart.sh (Replace yourusername with your actual Linux username).
 
-        Comment: Launches Conky with a delay
+- Comment: Launches Conky with a delay
 
-    Click Add to save the entry.
+Click Add to save the entry.
 
 🔁 3. Restart and Test
 
